@@ -3,7 +3,7 @@
 `$ pip install -r requirements.txt`
 2. Install Chromedriver and place in your $PATH
 
-3. Enter a Twitter username/password into `config.yml`
+3. Enter a username/password into `config.yml`
 4. Run Test<br>`$ behave`
 
 # Structure
