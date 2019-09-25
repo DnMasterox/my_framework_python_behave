@@ -2,3 +2,5 @@ selenium
 behave
 allure-behave
 pyhamcrest
+urllib
+hamcrest
