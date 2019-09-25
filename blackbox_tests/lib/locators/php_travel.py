@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class TwitterLocator:
+class PhpTravelLocator:
     search_input = (By.ID, "search-query")
     search_btn = (By.ID, "nav-search")
     tweets = (By.CLASS_NAME, "js-stream-item")

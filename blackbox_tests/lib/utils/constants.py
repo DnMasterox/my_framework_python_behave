@@ -41,4 +41,8 @@ class Constants:
     USER_PHONE = '+31644574635'
 
     DIR_VAR = '/project'
-    SYS_TEST = "#{DIR_VAR}/blackbox-test/SYS_TEST/"
+    SYS_TEST = '/project/blackbox-test/SYS_TEST/'
+
+    USERNAME = 'username'
+    GLOBAL_ENTRY_Q = '#globalentry'
+    TWEETS = 'tweets'

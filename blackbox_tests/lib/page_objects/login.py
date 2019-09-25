@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from blackbox_tests.lib.locators.login import LoginLocators
 from blackbox_tests.lib.page_objects.base_page import BasePage
-from blackbox_tests.lib.page_objects.twitter_timeline import TwitterTimeline
+from blackbox_tests.lib.page_objects.Php_Travel import TwitterTimeline
 from blackbox_tests.lib.utils.constants import URL
 
 
@@ -13,7 +13,7 @@ class LoginPage(BasePage):
                           context.browser,
                           )
         self.context = context
-        self.base_url = URL.TWITTER
+        self.base_url = URL.PHP_TRAVELS
         self.visit(url=self.base_url)
 
     locator_dictionary = LoginLocators.__dict__

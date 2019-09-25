@@ -6,11 +6,11 @@ from blackbox_tests.lib.utils.constants import Constants, URL
 from hamcrest import assert_that, contains_string, equal_to
 
 
-#use_step_matcher("re")
+# use_step_matcher("re")
 
 
 @given("user navigates to the URL")
-def step_load_url(context):
+def step_impl(context):
     """
     :type context: behave.runner.Context
     """
@@ -21,7 +21,7 @@ def step_load_url(context):
 
 
 @when('user logs in')
-def step_login(context):
+def step_impl(context):
     """
     :type context: behave.runner.Context
     :type user: str
@@ -38,11 +38,10 @@ def step_impl(context):
     """
     context.timeline_page.view_latest_tweets(search=True)
     time.sleep(3)
-    assert_that(context.timeline_page.browser.current_url, contains_string(Constants.TWEETS))
+    # assert_that(context.timeline_page.browser.current_url, contains_string(Constants.TWEETS))
 
-
-@step('the navigation bar should include the following "(?P<columns>.+)":')
-def step_impl(context, columns):
+    # @step('the navigation bar should include the following "(?P<columns>.+)":')
+    # def step_impl(context, columns):
     """
     :type context: behave.runner.Context
     :type columns: str
