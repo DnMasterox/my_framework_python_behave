@@ -8,7 +8,7 @@ from blackbox_tests.lib.page_objects.base_page import BasePage
 from blackbox_tests.lib.utils.constants import URL, Constants
 
 
-class TwitterTimeline(BasePage):
+class LandingPage(BasePage):
     locator_dictionary = PhpTravelLocator.__dict__
 
     def __init__(self, context):

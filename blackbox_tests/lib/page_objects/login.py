@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from blackbox_tests.lib.locators.login import LoginLocators
 from blackbox_tests.lib.page_objects.base_page import BasePage
-from blackbox_tests.lib.page_objects.Php_Travel import TwitterTimeline
+from blackbox_tests.lib.page_objects.php_travel import LandingPage
 from blackbox_tests.lib.utils.constants import URL
 
 
@@ -22,4 +22,4 @@ class LoginPage(BasePage):
         self.username.send_keys(username)
         self.password.send_keys(password)
         self.submit_btn.click()
-        return TwitterTimeline(self.context)
+        return LandingPage(self.context)

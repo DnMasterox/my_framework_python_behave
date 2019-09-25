@@ -16,7 +16,7 @@ def step_impl(context):
     """
     context.login_page = LoginPage(context)
     assert_that(context.login_page.browser.current_url, contains_string(URL.PHP_TRAVELS))
-    assert_that(context.login_page.username.get_attribute('autocomplete'), equal_to(Constants.USER_MAIL))
+    # assert_that(context.login_page.username.get_attribute('autocomplete'), equal_to(Constants.USER_MAIL))
     time.sleep(4)
 
 
