@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class LandingPageLocator:
     # My account button
-    my_account_btn = (By.CLASS_NAME, 'dropdown-toggle go-text-right')
+    my_account_btn = (By.XPATH, "//li[@id='li_myaccount']/a[@aria-expanded='true']")
     login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
 
     # Other buttons

@@ -28,4 +28,4 @@ class LandingPage(BasePage):
     def navigate_to_login_page(self):
         self.my_account_btn.click()
         self.login_btn.click()
-        return LoginPage(self.context)
+        #return LoginPage(self.context)

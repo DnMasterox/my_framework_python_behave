@@ -1,9 +1,9 @@
 import os
 
-USER_MAP = {
+USER_CREDENTIALS = {
     'GlobalEntry': {
-        'username': os.environ.get("TWITTER_USERNAME"),
-        'password': os.environ.get("TWITTER_PASSWORD"),
+        'username': 'user@phptravels.com',
+        'password': 'demouser',
     },
 }
 
@@ -15,6 +15,7 @@ class Path:
 
 class URL:
     PHP_TRAVELS = 'https://phptravels.net'
+    PHP_TRAVELS_LOGIN = 'https://www.phptravels.net/demo/login'
 
 
 class Constants:
@@ -46,3 +47,6 @@ class Constants:
     USERNAME = 'username'
     GLOBAL_ENTRY_Q = '#globalentry'
     TWEETS = 'tweets'
+
+    # login page data
+    PAGENAME = 'LOGIN'

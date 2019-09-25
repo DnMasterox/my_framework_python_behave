@@ -13,13 +13,13 @@ class LoginPage(BasePage):
                           context.browser,
                           )
         self.context = context
-        self.base_url = URL.PHP_TRAVELS
+        self.base_url = URL.PHP_TRAVELS_LOGIN
         self.visit(url=self.base_url)
 
     locator_dictionary = LoginPageLocators.__dict__
 
     def login(self, username='', password=''):
-        self.username.send_keys(username)
+        self.email_form.send_keys(username)
         self.password.send_keys(password)
         self.submit_btn.click()
         #return LandingPage(self.context)
