@@ -3,8 +3,10 @@ from selenium.webdriver.common.by import By
 
 class LandingPageLocator:
     # My account button
-    my_account_btn = (By.XPATH, "//li[@id='li_myaccount']/a[@aria-expanded='true']")
-    login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
+    # my_account_btn = (By.XPATH, "//li[@id='li_myaccount']/a[@aria-expanded='true']")
+    my_account_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount")
+    # login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
+    login_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount ul a")
 
     # Other buttons
     search_input = (By.ID, "search-query")

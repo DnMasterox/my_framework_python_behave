@@ -26,6 +26,10 @@ class LandingPage(BasePage):
         self.search_input.send_keys(Keys.ENTER)
 
     def navigate_to_login_page(self):
-        self.my_account_btn.click()
-        self.login_btn.click()
-        #return LoginPage(self.context)
+        my_account_btn = self.context.browser.find_lements(*self.locator_dictionary['my_account_btn'])
+        my_account_btn.click()
+        my_login_btn = self.context.browser.find_lements(*self.locator_dictionary['login_btn'])
+        my_login_btn.click()
+        # self.my_account_btn.click()
+        # self.login_btn.click()
+        # return LoginPage(self.context)

@@ -16,6 +16,7 @@ class Path:
 class URL:
     PHP_TRAVELS = 'https://phptravels.net'
     PHP_TRAVELS_LOGIN = 'https://www.phptravels.net/demo/login'
+    PHP_TRAVELS_ACCOUNT = 'https://www.phptravels.net/demo/account/'
 
 
 class Constants:

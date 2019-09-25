@@ -17,6 +17,8 @@ def step_impl(context):
     """
     context.landing_page = LandingPage(context)
     assert_that(context.landing_page.browser.current_url, contains_string(URL.PHP_TRAVELS))
+    # context.login_page = context.landing_page.navigate_to_login_page
+    # assert_that(context.login_page.username.get_attribute('autocomplete'), equal_to(Constants.USER_MAIL))
     time.sleep(4)
 
 
@@ -36,8 +38,9 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    context.timeline_page.view_latest_tweets(search=True)
+    context.login_page.login(username=Constants.USER_MAIL, password=Constants.USER_PASSWORD)
     time.sleep(3)
+    assert_that(context.login_page.browser.current_url, contains_string(URL.PHP_TRAVELS_ACCOUNT))
     # assert_that(context.timeline_page.browser.current_url, contains_string(Constants.TWEETS))
 
     # @step('the navigation bar should include the following "(?P<columns>.+)":')
