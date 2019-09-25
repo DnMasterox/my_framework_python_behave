@@ -1,7 +1,8 @@
 import time
 from behave import *
 
-from blackbox_tests.lib.page_objects.login_page import LoginPage
+# from blackbox_tests.lib.page_objects.login_page import LoginPage
+from blackbox_tests.lib.page_objects.landing_page import LandingPage
 from blackbox_tests.lib.utils.constants import Constants, URL
 from hamcrest import assert_that, contains_string, equal_to
 
@@ -14,8 +15,8 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    context.login_page = LoginPage(context)
-    assert_that(context.login_page.browser.current_url, contains_string(URL.PHP_TRAVELS))
+    context.landing = LandingPage(context)
+    assert_that(context.landing.browser.current_url, contains_string(URL.PHP_TRAVELS))
     # assert_that(context.login_page.username.get_attribute('autocomplete'), equal_to(Constants.USER_MAIL))
     time.sleep(4)
 
