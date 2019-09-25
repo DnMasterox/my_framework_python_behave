@@ -1,7 +1,7 @@
 import time
 from behave import *
 
-from blackbox_tests.lib.page_objects.login import LoginPage
+from blackbox_tests.lib.page_objects.login_page import LoginPage
 from blackbox_tests.lib.utils.constants import Constants, URL
 from hamcrest import assert_that, contains_string, equal_to
 

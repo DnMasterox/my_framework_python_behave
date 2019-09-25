@@ -3,7 +3,7 @@ import time
 
 from selenium.webdriver.common.keys import Keys
 
-from blackbox_tests.lib.locators.php_travel import PhpTravelLocator
+from blackbox_tests.lib.locators.landing_page import PhpTravelLocator
 from blackbox_tests.lib.page_objects.base_page import BasePage
 from blackbox_tests.lib.utils.constants import URL, Constants
 

@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 
-from blackbox_tests.lib.locators.login import LoginLocators
+from blackbox_tests.lib.locators.login_page import LoginPageLocators
 from blackbox_tests.lib.page_objects.base_page import BasePage
-from blackbox_tests.lib.page_objects.php_travel import LandingPage
+from blackbox_tests.lib.page_objects.landing_page import LandingPage
 from blackbox_tests.lib.utils.constants import URL
 
 
@@ -16,7 +16,7 @@ class LoginPage(BasePage):
         self.base_url = URL.PHP_TRAVELS
         self.visit(url=self.base_url)
 
-    locator_dictionary = LoginLocators.__dict__
+    locator_dictionary = LoginPageLocators.__dict__
 
     def login(self, username='', password=''):
         self.username.send_keys(username)

@@ -20,16 +20,16 @@ def before_all(context):
     context.browser = context.config.get('env')['browser']
     if context.browser == 'chrome':
         context.browser = webdriver.Chrome()
-    else:
-        raise RuntimeError("Please run with Chrome")
-    if not os.path.exists(Path.FAILED_SCREENSHOT):
-        os.makedirs(Path.FAILED_SCREENSHOT)
-    context.twitter_username = context.config.get('userdata')['username']
-    if not context.twitter_username:
-        context.twitter_username = os.environ.get("TWITTER_USERNAME")
-    context.twitter_password = context.config.get('userdata')['password']
-    if not context.twitter_password:
-        context.twitter_password = os.environ.get("TWITTER_PASSWORD")
+    # else:
+    #     raise RuntimeError("Please run with Chrome")
+    # if not os.path.exists(Path.FAILED_SCREENSHOT):
+    #     os.makedirs(Path.FAILED_SCREENSHOT)
+    # context.twitter_username = context.config.get('userdata')['username']
+    # if not context.twitter_username:
+    #     context.twitter_username = os.environ.get("TWITTER_USERNAME")
+    # context.twitter_password = context.config.get('userdata')['password']
+    # if not context.twitter_password:
+    #     context.twitter_password = os.environ.get("TWITTER_PASSWORD")
 
 
 def before_feature(context, feature):
