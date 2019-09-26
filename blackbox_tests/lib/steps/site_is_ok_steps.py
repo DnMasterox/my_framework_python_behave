@@ -9,7 +9,9 @@ use_step_matcher("re")
 
 
 def catch_all(func):
-    """If that's a common pattern, just write own decorator for handling exceptions"""
+    """If that's a common pattern, just write own decorator for handling exceptions
+    https://stackoverflow.com/questions/27894993/handling-exceptions-in-python-behave-testing-framework
+    """
 
     def wrapper(context, *args, **kwargs):
         try:

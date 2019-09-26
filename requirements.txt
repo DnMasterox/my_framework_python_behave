@@ -3,4 +3,3 @@ behave
 allure-behave
 pyhamcrest
 requests
-hamcrest

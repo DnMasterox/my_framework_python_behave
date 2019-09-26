@@ -7,6 +7,8 @@ class LandingPageLocator:
     my_account_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount")
     # login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
     login_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount ul a")
+    landing_page_title = (By.XPATH, '//div[@class="preview__envato-logo"]/*')
+    columns_array = (By.XPATH, '//a/span[@class="hidden-xs"]')
 
     # Other buttons
     search_input = (By.ID, "search-query")

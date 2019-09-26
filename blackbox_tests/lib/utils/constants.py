@@ -38,7 +38,7 @@ class Constants:
     SUPPLIER_MAIL = 'supplier@phptravels.com'
     SUPPLIER_PASSWORD = 'demosupplier'
 
-    TITLE = 'FEATURED TOURS'
+    TITLE = 'PHPTRAVELS'
 
     # personal account details
     USER_FIRST_NAME = 'Raghavan'

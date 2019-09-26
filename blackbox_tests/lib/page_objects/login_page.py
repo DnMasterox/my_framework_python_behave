@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 
 from blackbox_tests.lib.locators.login_page import LoginPageLocators
 from blackbox_tests.lib.page_objects.base_page import BasePage
-#from blackbox_tests.lib.page_objects.landing_page import LandingPage
 from blackbox_tests.lib.utils.constants import URL
 
 
@@ -22,4 +21,3 @@ class LoginPage(BasePage):
         self.email_form.send_keys(username)
         self.password.send_keys(password)
         self.submit_btn.click()
-        #return LandingPage(self.context)
