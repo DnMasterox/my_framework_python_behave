@@ -8,7 +8,21 @@ from requests.exceptions import HTTPError
 use_step_matcher("re")
 
 
+def catch_all(func):
+    """If that's a common pattern, just write own decorator for handling exceptions"""
+
+    def wrapper(context, *args, **kwargs):
+        try:
+            func(context, *args, **kwargs)
+            context.exc = None
+        except HTTPError as e:
+            context.exc = e
+
+    return wrapper
+
+
 @given("user send request to URL")
+@catch_all
 def step_impl(context):
     """
     :type context: behave.runner.Context
@@ -17,6 +31,7 @@ def step_impl(context):
 
 
 @when("response is given back")
+@catch_all
 def step_impl(context):
     """
     :type context: behave.runner.Context
@@ -25,6 +40,7 @@ def step_impl(context):
 
 
 @then("status code should be 200")
+@catch_all
 def step_impl(context):
     """
     :type context: behave.runner.Context

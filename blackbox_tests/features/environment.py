@@ -45,7 +45,8 @@ def after_scenario(context, scenario):
         context.browser.save_screenshot(Path.FAILED_SCREENSHOT + scenario.name + "_failed.png")
     try:
         context.browser.delete_all_cookies()
-
+    except Exception as exception:
+        context.logger.info("Failed: {}".format(exception))
 
 
 def after_feature(context, feature):
