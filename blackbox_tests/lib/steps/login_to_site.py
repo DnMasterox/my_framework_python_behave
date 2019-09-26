@@ -32,7 +32,7 @@ def step_impl(context):
     assert_that(context.login_page.title_panel.text, equal_to(Constants.PAGENAME))
 
 
-@then("user should be able to see landing page")
+@then("user should be able to see profile page")
 def step_impl(context):
     """
     :type context: behave.runner.Context

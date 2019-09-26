@@ -8,7 +8,11 @@ class LandingPageLocator:
     # login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
     login_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount ul a")
     landing_page_title = (By.XPATH, '//div[@class="preview__envato-logo"]/*')
-    columns_array = (By.XPATH, '//a/span[@class="hidden-xs"]')
+    hotels_column = (By.XPATH, '//*[@title="Hotels"]/span')
+    flights_column = (By.XPATH, '[title = "Flights"]')
+    tours_column = (By.XPATH, '[title = "Tours"]')
+    cars_column = (By.XPATH, '[title = "Cars"]')
+    # columns_array = [hotels_column, flights_column, tours_column, cars_column]
 
     # Other buttons
     search_input = (By.ID, "search-query")

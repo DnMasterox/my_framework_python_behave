@@ -1,7 +1,7 @@
 import time
 
 from behave import *
-from hamcrest import assert_that, contains_string, equal_to
+from hamcrest import assert_that, is_in, equal_to
 
 from blackbox_tests.lib.page_objects.landing_page import LandingPage
 from blackbox_tests.lib.utils.constants import Constants
@@ -32,40 +32,10 @@ def step_impl(context, column):
     :type context: behave.runner.Context
     :type column: str
     """
-    raise NotImplementedError(u'STEP: And the navigation bar should include the following "<column>"')
-
-
-@step('I choose "(?P<option>.+)" tab')
-def step_impl(context, option):
-    """
-    :type context: behave.runner.Context
-    :type option: str
-    """
-    raise NotImplementedError(u'STEP: And I choose "<option>" tab')
-
-
-@step('I select "(?P<pick_up>.+)" and "(?P<drop_off>.+)" location')
-def step_impl(context, pick_up, drop_off):
-    """
-    :type context: behave.runner.Context
-    :type pick_up: str
-    :type drop_off: str
-    """
-    raise NotImplementedError(u'STEP: And I select "<pick_up>" and "<drop_off>" location')
-
-
-@step("I search query")
-def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: And I search query')
-
-
-@then('I should be able to see notification "(?P<message>.+)"')
-def step_impl(context, message):
-    """
-    :type context: behave.runner.Context
-    :type message: str
-    """
-    raise NotImplementedError(u'STEP: Then I should be able to see notification "<message>"')
+    # context.columns = [context.landing_page.hotels_column.text,
+    #                    context.landing_page.flights_column.text,
+    #                    context.landing_page.tours_column.text,
+    #                    context.landing_page.cars_column.text]
+    # for point in context.columns:
+    #     point = point.text
+    assert_that(context.landing_page.hotels_column.text, equal_to(column))

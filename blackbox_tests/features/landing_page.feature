@@ -9,9 +9,9 @@ Feature:  Landing Page
     Examples:
       | column  |
       | HOTELS  |
-      | FLIGHTS |
-      | TOURS   |
-      | CARS    |
+#      | FLIGHTS |
+#      | TOURS   |
+#      | CARS    |
 
 
 #  Scenario Outline: Should find appropriate car
