@@ -1,9 +1,9 @@
 import os
 
-USER_MAP = {
+USER_CREDENTIALS = {
     'GlobalEntry': {
-        'username': os.environ.get("TWITTER_USERNAME"),
-        'password': os.environ.get("TWITTER_PASSWORD"),
+        'username': 'user@phptravels.com',
+        'password': 'demouser',
     },
 }
 
@@ -15,9 +15,14 @@ class Path:
 
 class URL:
     PHP_TRAVELS = 'https://phptravels.net'
+    PHP_TRAVELS_LOGIN = 'https://www.phptravels.net/demo/login'
+    PHP_TRAVELS_ACCOUNT = 'https://www.phptravels.net/demo/account/'
 
 
 class Constants:
+    # Response
+    OK_RESPONSE = 200
+    # ++++
     SUPPLIER = '/SUPPLIER'
     ADMIN = '/ADMIN'
 
@@ -33,7 +38,7 @@ class Constants:
     SUPPLIER_MAIL = 'supplier@phptravels.com'
     SUPPLIER_PASSWORD = 'demosupplier'
 
-    TITLE = 'FEATURED TOURS'
+    TITLE = 'PHPTRAVELS'
 
     # personal account details
     USER_FIRST_NAME = 'Raghavan'
@@ -41,4 +46,11 @@ class Constants:
     USER_PHONE = '+31644574635'
 
     DIR_VAR = '/project'
-    SYS_TEST = "#{DIR_VAR}/blackbox-test/SYS_TEST/"
+    SYS_TEST = '/project/blackbox-test/SYS_TEST/'
+
+    USERNAME = 'username'
+    GLOBAL_ENTRY_Q = '#globalentry'
+    TWEETS = 'tweets'
+
+    # login page data
+    PAGENAME = 'LOGIN'

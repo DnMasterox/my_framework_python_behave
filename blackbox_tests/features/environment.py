@@ -24,12 +24,6 @@ def before_all(context):
         raise RuntimeError("Please run with Chrome")
     if not os.path.exists(Path.FAILED_SCREENSHOT):
         os.makedirs(Path.FAILED_SCREENSHOT)
-    context.twitter_username = context.config.get('userdata')['username']
-    if not context.twitter_username:
-        context.twitter_username = os.environ.get("TWITTER_USERNAME")
-    context.twitter_password = context.config.get('userdata')['password']
-    if not context.twitter_password:
-        context.twitter_password = os.environ.get("TWITTER_PASSWORD")
 
 
 def before_feature(context, feature):
@@ -49,7 +43,10 @@ def after_scenario(context, scenario):
         print("Failed: {}".format(Path.FAILED_SCREENSHOT + scenario.name + "_failed.png"))
         context.logger.info("Failed: {}".format(Path.FAILED_SCREENSHOT + scenario.name + "_failed.png"))
         context.browser.save_screenshot(Path.FAILED_SCREENSHOT + scenario.name + "_failed.png")
-    context.browser.delete_all_cookies()
+    try:
+        context.browser.delete_all_cookies()
+    except Exception as exception:
+        context.logger.info("Failed: {}".format(exception))
 
 
 def after_feature(context, feature):

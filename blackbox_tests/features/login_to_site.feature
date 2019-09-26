@@ -7,7 +7,7 @@ Feature: Login to site
   Scenario: Should see navigation bar
     Given user navigates to the URL
     When user logs in
-    Then user should be able to see landing page
+    Then user should be able to see profile page
 #    And the navigation bar should include the following "<columns>":
 #
 #    Examples:
