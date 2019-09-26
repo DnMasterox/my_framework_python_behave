@@ -21,7 +21,7 @@ class URL:
 
 class Constants:
     # Response
-    OK_RESPONSE = '200'
+    OK_RESPONSE = 200
     # ++++
     SUPPLIER = '/SUPPLIER'
     ADMIN = '/ADMIN'

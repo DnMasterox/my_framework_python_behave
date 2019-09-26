@@ -15,7 +15,7 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     context.landing_page = LandingPage(context)
-    assert_that(context.landing_page.browser.current_url, contains_string(URL.PHP_TRAVELS))
+
     # context.login_page = context.landing_page.navigate_to_login_page
     # assert_that(context.login_page.username.get_attribute('autocomplete'), equal_to(Constants.USER_MAIL))
     time.sleep(4)
