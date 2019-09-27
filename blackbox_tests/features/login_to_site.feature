@@ -4,10 +4,16 @@ Feature: Login to site
   User should always be able to post.
   It is important that the login always works.
 
+#  Background: some requirement of this test
+#    Given some setup condition
+#      And some other setup action
+
   Scenario: Should see navigation bar
     Given user navigates to the URL
     When user logs in
     Then user should be able to see profile page
+
+
 #    And the navigation bar should include the following "<columns>":
 #
 #    Examples:

@@ -29,7 +29,8 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    context.request = requests.get(URL.PHP_TRAVELS)
+    url = URL.PHP_TRAVELS[:-1]
+    context.request = requests.get(url)
 
 
 @when("response is given back")
