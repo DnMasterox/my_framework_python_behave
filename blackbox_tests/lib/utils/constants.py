@@ -14,7 +14,7 @@ class Path:
 
 
 class URL:
-    PHP_TRAVELS = 'https://phptravels.net'
+    PHP_TRAVELS = 'https://www.phptravels.net/'
     PHP_TRAVELS_LOGIN = 'https://www.phptravels.net/login'
     PHP_TRAVELS_ACCOUNT = 'https://www.phptravels.net/account/'
 
@@ -38,7 +38,7 @@ class Constants:
     SUPPLIER_MAIL = 'supplier@phptravels.com'
     SUPPLIER_PASSWORD = 'demosupplier'
 
-    TITLE = 'PHPTRAVELS'
+    TITLE = 'PHPTRAVELS | Travel Technology Partner'
 
     # personal account details
     USER_FIRST_NAME = 'Raghavan'

@@ -7,7 +7,7 @@ class LandingPageLocator:
     my_account_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount")
     # login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
     login_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount ul a")
-    landing_page_title = (By.XPATH, '//div[@class="preview__envato-logo"]/a')
+    landing_page_title = (By.XPATH, '//body/title')
     landing_page_logo = (By.XPATH, '//img[@alt="PHPTRAVELS | Travel Technology Partner"]')
     hotels_column = (By.XPATH, "//*[@title='Hotels']/span[@class='hidden-xs']")
     hotels_button = (By.XPATH, '/html/body/nav/div/div[1]/a/img')

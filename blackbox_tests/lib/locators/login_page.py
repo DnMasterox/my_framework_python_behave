@@ -7,5 +7,3 @@ class LoginPageLocators:
     password = (By.XPATH, '//div[@class="form-group"]/input[@type="password"]')
     remember_me_chbox = (By.XPATH, '//input[@id="remember-me"]')
     submit_btn = (By.XPATH, '//form/button[@type="submit"]')
-
-

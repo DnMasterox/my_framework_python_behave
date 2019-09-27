@@ -3,7 +3,7 @@ Feature:  Landing Page
   # Enter feature description here
 
   Scenario Outline: Should see navigation bar
-    When user open landing page
+    When user opens landing page
     Then user should be able to see landing page
     And the navigation bar should include the following "<column>"
     Examples:
