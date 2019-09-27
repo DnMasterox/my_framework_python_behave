@@ -3,3 +3,4 @@ behave
 allure-behave
 pyhamcrest
 requests
+faker

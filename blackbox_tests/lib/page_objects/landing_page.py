@@ -28,8 +28,10 @@ class LandingPage(BasePage):
     def navigate_to_login_page(self):
         my_account_btn = self.context.browser.find_lements(*self.locator_dictionary['my_account_btn'])
         my_account_btn.click()
+        time.sleep(3)
         my_login_btn = self.context.browser.find_lements(*self.locator_dictionary['login_btn'])
         my_login_btn.click()
+        time.sleep(3)
         # self.my_account_btn.click()
         # self.login_btn.click()
-        # return LoginPage(self.context)
+        return LoginPage(self.context)

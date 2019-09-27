@@ -7,12 +7,15 @@ class LandingPageLocator:
     my_account_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount")
     # login_btn = (By.XPATH, '//nav[@class="navbar navbar-default"]//*[@id="li_myaccount"]//*/li[1]/a')
     login_btn = (By.CSS_SELECTOR, "div[class='container'] #li_myaccount ul a")
-    landing_page_title = (By.XPATH, '//div[@class="preview__envato-logo"]/*')
-    hotels_column = (By.XPATH, '//*[@title="Hotels"]/span')
-    flights_column = (By.XPATH, '[title = "Flights"]')
-    tours_column = (By.XPATH, '[title = "Tours"]')
-    cars_column = (By.XPATH, '[title = "Cars"]')
+    landing_page_title = (By.XPATH, '//div[@class="preview__envato-logo"]/a')
+    landing_page_logo = (By.XPATH, '//img[@alt="PHPTRAVELS | Travel Technology Partner"]')
+    hotels_column = (By.XPATH, "//*[@title='Hotels']/span[@class='hidden-xs']")
+    hotels_button = (By.XPATH, '/html/body/nav/div/div[1]/a/img')
+    flights_column = (By.XPATH, "//*[@title='Flights']/span[@class='hidden-xs']")
+    tours_column = (By.XPATH, "//*[@title='Tours']/span[@class='hidden-xs']")
+    cars_column = (By.XPATH, "//*[@title='Cars']/span[@class='hidden-xs']")
     # columns_array = [hotels_column, flights_column, tours_column, cars_column]
+    # columns_array = (By.XPATH, "//a[@class='text-center']/span[@class='hidden-xs']")
 
     # Other buttons
     search_input = (By.ID, "search-query")
