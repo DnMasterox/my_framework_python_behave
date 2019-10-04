@@ -1,5 +1,5 @@
 # Created by Mykola Shumakov
-@php_travel
+#@php_travel
 Feature: Login to site
   User should always be able to post.
   It is important that the login always works.
